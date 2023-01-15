@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color: #272727;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+.container{
+    margin-top: -40px;
+    width: 300px;
+}
+
+h1{
+    text-align: center;
+    font-size: 3.4rem;
+    margin-bottom: 40px;
+}
+
+.label-float{
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.label-float label{
+    position: absolute;
+    top: 0;
+    left: 7px;
+    pointer-events: none;
+    transition: all .3s ease-out;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+input{
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #fff;
+    font-size: 1rem;
+    color: #fff;
+    padding: 4px;
+    padding-left: 5px;
+}
+
+.label-float input:focus{
+    border-bottom: 2px solid #C575D2;
+}
+
+.label-float input:focus + label,
+.label-float input:valid + label{
+    font-size: 11px;
+    margin-top: -20px;
+}
+
+button{
+    width: 100%;
+    padding: 10px;
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+button:disabled{
+    border: 2px solid #777;
+    color: #777;
+    cursor: auto;
+}
+
+.forget{
+    display: flex;
+    justify-content: end;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+    font-size: .7rem;
+    margin-top: 15px;
+    border-bottom: 1px solid transparent;
+}
+
+a:hover{
+    border-bottom: 1px dashed #fff;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <script src="https://kit.fontawesome.com/b79dbb2154.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+
+
+  <title>Iniciar sessão</title>
+</head>
+<body>
+
+  <header>
+    <div class="logo"><img src="images/logo.png" alt="logo-riot-Games"></div>
+  </header>
+
+  <main>
+    
+
+    <div class="container-login">
+      <h1 class="login-title">Iniciar sessão</h1>
+
+      <form class="form">
+        <div class="label-float">
+          <input type="text" id="nome" required>
+          <label for="nome">NOME DE USUÁRIO</label>
+        </div>
+
+        <div class="label-float">
+          <input type="password" id="senha" required>
+          <label for="senha">SENHA</label>
+        </div>
+
+        <div class="social-area">
+          <div class="social facebook"><img src="images/facebook-icon.png" alt="facebook"></div>
+          <div class="social google"><img src="images/google-icon.png" alt="google"></div>
+          <div class="social apple"><img src="images/apple-icon.png" alt="apple"></div>
+        </div>
+
+        <div class="checkbox-area">
+          <input type="checkbox" id="manter-login">
+          <label for="manter-login">Manter login</label>
+        </div>
+
+      </form>
+
+      <div class="wrapper">
+        <button class="button" disabled>
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+  
+        <a href="#" class="login__link">não consegue fazer login?</a>
+        <a href="#" class="login__link">criar conta</a>
+      </div>
+    </div>
+  </main>
+
+
+  <script src="script.js"></script>
+</body>
+</html>

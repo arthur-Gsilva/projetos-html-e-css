@@ -1,0 +1,210 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-image: url('images/bg-arcane.jpg');
+  background-size: cover;
+  background-position: center;
+  padding-bottom: 20px;
+}
+
+header{
+  padding: 40px 0px 20px 40px;
+}
+
+.logo img{
+  width: 140px;
+  height: 50px;
+}
+
+main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.container-login{
+  background-color: #fff;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 420px;
+}
+
+.login-title{
+  font-size: 1.5rem;
+  margin-bottom: 50px;
+}
+
+.label-float{
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.label-float input{
+  width: 330px;
+  height: 45px;
+  padding: 15px 5px 5px;
+  background-color: lightgray;
+  border: none;
+  display: inline-block;
+  font-size: 1rem;
+}
+
+.label-float input:focus{
+  background-color: #fff;
+}
+
+.label-float label{
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: .7rem;
+  font-weight: bold;
+  padding-top: 15px;
+  padding-left: 15px;
+  color: #666;
+  cursor: text;
+  transition: all .3s ease-out;
+}
+
+.label-float input:focus + label,
+.label-float input:valid + label{
+  padding: 3px 0 0 5px;
+}
+
+.social-area{
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.social img{
+  width: 20px;
+}
+
+.social{
+  background-color: brown;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 0px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.facebook,
+.google,
+.apple{
+  flex: 1;
+}
+
+.facebook{
+  background-color: #0966DE;
+}
+.google{ 
+  background-color: #f5f5f5;
+}
+.apple{
+  background-color: #000;
+}
+
+.checkbox-area{
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-area label{
+  cursor: pointer;
+  user-select: none;
+}
+
+#manter-login{
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background-color: lightgray;
+  margin-right: 8px;
+  border-radius: 3px;
+}
+
+#manter-login:checked{
+  background-color: red;
+}
+
+#manter-login:checked::after{
+  content: "";
+  display: block;
+  width: 5px;
+  height: 10px;
+  border: 3px solid #fff;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+  margin: 2px 6px;
+}
+
+
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.button{
+  width: 60px;
+  height: 60px;
+  margin: auto;
+  border: 2px solid red;
+  background-color: transparent;
+  border-radius: 15px;
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+
+.button i{
+  color: red;
+  font-size: 1.8rem;
+}
+
+.button:disabled{
+  border: 2px solid lightgray;
+  cursor: auto;
+}
+.button:disabled i{
+  color: lightgray;
+}
+
+
+.wrapper a{
+  text-align: center;
+  text-decoration: none;
+  color: #666;
+  text-transform: uppercase;
+  font-size: .7rem;
+  font-weight: bold;
+  font-family: sans-serif;
+  padding: 5px;
+}
+
+.wrapper a:hover{
+  color: #000;
+}
+
+@media(max-width: 450px){
+  .container-login{
+    width: 290px;
+  }
+
+  .label-float input{
+    width: 260px;
+  }
+}
