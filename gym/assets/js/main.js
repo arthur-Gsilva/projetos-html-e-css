@@ -129,3 +129,17 @@ const formBMI = (event) => {
 }
 
 form.addEventListener('submit', formBMI)
+
+
+// SCROLL REVEAL
+
+const sr = ScrollReveal({
+    origin: 'top',
+    distance: '60px',
+    duration: 2500,
+    delay: 400
+})
+
+sr.reveal('.home-data, .choose-img, .calculate-content, .footer-form', {origin: 'left'})
+sr.reveal('.home-image, .choose-grid, .calculate-images', {origin: 'right'})
+sr.reveal('.logos-container img, .program-item, .pricing-item, .footer-links-item', {interval: 100})

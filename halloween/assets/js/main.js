@@ -85,3 +85,17 @@ function scrollActive(){
     })
 }
 window.addEventListener('scroll', scrollActive)
+
+// SCROLL REVEAL
+
+const sr = ScrollReveal({
+    origin: 'top',
+    distance: '60px',
+    duration: 2500,
+    delay: 400
+})
+
+sr.reveal('.home-swiper, .new-swiper, .newsletter-container, .footer-logo')
+sr.reveal('.category-item, .trick-item, .footer-list', {interval: 100})
+sr.reveal('.about-content, .discount-img-area', {origin: 'left'})
+sr.reveal('.about-img-area, .discount-content', {origin: 'right'})
