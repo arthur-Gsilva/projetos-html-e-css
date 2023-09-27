@@ -41,3 +41,17 @@ const backSlide = () => {
 
 document.querySelector('.right-arrow').addEventListener('click', nextSlide)
 document.querySelector('.left-arrow').addEventListener('click', backSlide)
+
+
+// BACKGROUND HEADER
+
+
+window.addEventListener('scroll', () => {
+    let header = document.querySelector('.header')
+
+    if(window.scrollY >= 30){
+        header.classList.add('background-header')
+    } else{
+        header.classList.remove('background-header')
+    }
+})

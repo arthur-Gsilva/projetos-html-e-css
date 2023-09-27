@@ -76,9 +76,14 @@ p{
 
 /* HEADER */
 
-header{
+.header{
     background-color: #260101;
-    color: aqua; 
+    color: aqua;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 998;
 }
 
 .header-container{
@@ -167,6 +172,7 @@ header{
 
 .home-container{
     text-align: center;
+    padding-top: 100px;
 }
 
 .home-info h1{
@@ -180,10 +186,6 @@ header{
 
 .home-info button{
     margin-bottom: 40px;
-}
-
-.home-img img{
-    
 }
 
 
@@ -320,11 +322,14 @@ header{
     height: 70px;
     width: 70px;
     border-radius: 50%;
-    margin-left: 20px;
     margin-bottom: 10px;
 }
 .client-info{
     margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .classification{
@@ -449,6 +454,10 @@ header{
 
     .plan-list-item{
         font-size: 1.2rem;
+    }
+
+    .client-name{
+        font-size: 1.6rem;
     }
 }
 
