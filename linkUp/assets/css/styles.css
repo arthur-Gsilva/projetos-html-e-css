@@ -1,3 +1,13 @@
+@keyframes rotate-animation{
+    from{
+        rotate: 0deg;
+    }
+
+    to{
+        rotate: 360deg;
+    }
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -21,6 +31,16 @@ h2{
 
 p{
     color: #41bfb3;
+}
+
+.container{
+    max-width: 1080px;
+}
+@media(min-width: 900px){
+    .container{
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 .section{
@@ -58,7 +78,10 @@ p{
 
 header{
     background-color: #260101;
-    color: aqua;
+    color: aqua; 
+}
+
+.header-container{
     display: flex;
     justify-content: space-between;
     padding: 20px;
@@ -73,10 +96,10 @@ header{
 
 .logo-img img{
     width: 30px;
+    animation: rotate-animation 2s infinite linear;
 }
 
 .nav{
-    display: none;
     position: fixed;
     top: -250px;
     left: 0;
@@ -89,6 +112,27 @@ header{
     text-align: center;
     transition: .3s ease-out;
     z-index: 999;
+}
+
+@media(min-width: 900px){
+    .nav{
+        position: initial;
+        padding: 0;
+    }
+
+    .nav-list{
+        display: flex;
+        gap: 30px;
+    }
+
+    .nav-item{
+        margin-bottom: 0 !important;
+    }
+
+    .menu-close,
+    .menu-opener{
+        display: none;
+    }
 }
 
 .nav-item{
@@ -138,6 +182,10 @@ header{
     margin-bottom: 40px;
 }
 
+.home-img img{
+    
+}
+
 
 /* PARTNES */
 .partnes-container h2{
@@ -146,6 +194,10 @@ header{
 }
 
 .partnes-area{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
     text-align: center;
 }
 .partnes-area img{
@@ -183,12 +235,13 @@ header{
 .who-img{
     text-align: center;
     margin-top: 40px;
-    background-color: #260101;
+    background-color: transparent;
     border-radius: 10px;
 }
 
 .who-img img{
     width: 100%;
+    max-width: 500px;
 }
 
 
@@ -196,13 +249,13 @@ header{
 
 .work-img img{
     width: 100%;
+    max-width: 400px;
 }
 
 .work-content{
     text-align: center;
 }
 .work-content h2{
-    text-align: initial;
     margin-bottom: 30px;
 }
 
@@ -223,7 +276,7 @@ header{
 .benefit-item{
     background-color: #260101;
     margin-bottom: 20px;
-    padding: 10px;
+    padding: 20px;
     height: 300px;
     border-radius: 10px;
 }
@@ -309,8 +362,8 @@ header{
 }
 
 .plans-area{
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(1fr);
     gap: 15px;
 }
 
@@ -351,4 +404,108 @@ header{
 }
 .plan-list-item i{
     color: green;
+}
+
+
+
+/* MEDIA QUERIES */
+
+
+
+@media(min-width: 600px){
+    .plans-area{
+        grid-template-columns: repeat(2, 1fr)
+    }
+
+    .logo-img img{
+        width: 50px;
+    }
+    .header-logo{
+        font-size: 1.2rem;
+    }
+
+    .work-container{
+        display: flex;
+        align-items: center;
+    }
+}
+
+@media(min-width: 690px){
+    .home-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+    }
+
+    .home-img img{
+        height: auto;
+        width: 80%;
+        max-width: 400px;
+    }
+
+    h3{
+        font-size: 1.9rem;
+    }
+
+    .plan-list-item{
+        font-size: 1.2rem;
+    }
+}
+
+@media(min-width: 740px){
+
+    h2{
+        font-size: 1.7rem;
+    }
+
+    .who-content{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+    }
+
+    .slideShow-feedback{
+        width: 100%;
+        overflow: hidden;
+    }
+    
+    .feedbacks-area{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+    }
+
+    .right-arrow,
+    .left-arrow{
+        display: none;
+    }
+
+    .benefit-items{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+}
+
+@media(min-width: 900px){
+    .home-info h1{
+        font-size: 2.2rem;
+    }
+
+    p{
+        font-size: 1.2rem;
+    }
+
+    .partnes-area img{
+        width: 180px;
+    }
+
+    .plans-area{
+        grid-template-columns: repeat(3, 1fr)
+    }
+
+    .benefit-items{
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
