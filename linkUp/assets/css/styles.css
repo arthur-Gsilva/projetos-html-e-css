@@ -44,7 +44,7 @@ p{
 }
 
 .section{
-    padding: 60px 20px 20px 20px;
+    padding: 60px 20px 2.5rem 20px;
 }
 
 .section-light{
@@ -482,7 +482,7 @@ p{
         width: 100%;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 15px;
+        gap: 35px;
     }
 
     .right-arrow,
@@ -511,10 +511,43 @@ p{
     }
 
     .plans-area{
-        grid-template-columns: repeat(3, 1fr)
+        grid-template-columns: repeat(3, 1fr);
+        gap: 35px;
     }
 
     .benefit-items{
         grid-template-columns: repeat(3, 1fr);
+        gap: 35px;
+    }
+}
+
+
+@media(min-width: 1700px){
+    .container{
+        max-width: 1400px;
+    }
+
+    .benefit-item{
+        padding-bottom: 400px;
+    }
+
+    p{
+        font-size: 1.7rem;
+    }
+
+    h2{
+        font-size: 2.3rem;
+    }
+
+    .home-info h1{
+        font-size: 2.7rem;
+    }
+
+    .header{
+        font-size: 1.3rem;
+    }
+
+    .header-logo{
+        font-size: 1.5rem;
     }
 }
