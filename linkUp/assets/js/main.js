@@ -11,6 +11,9 @@ const closeMenu = () => {
 document.querySelector('.menu-opener').addEventListener('click', openMenu)
 document.querySelector('.menu-close').addEventListener('click', closeMenu)
 
+const links = document.querySelectorAll('.nav-item a')
+links.forEach(link => link.addEventListener('click', closeMenu))
+
 
 // SLIDE EVENTS
 
